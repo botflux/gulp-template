@@ -1,9 +1,15 @@
-const { task, src, dest } = require('gulp')
+const { task, src, dest, series } = require('gulp')
 const uglify = require('gulp-uglify')
 const babel = require('gulp-babel')
 const concat = require('gulp-concat')
+const clean = require('gulp-clean')
 
-task('js', () => {
+task('clean', () => {
+    return src('./dist', { read: false, allowEmpty: true })
+        .pipe(clean())
+})
+
+task('minify-js', () => {
     return src('./src/**/*.js')
         .pipe(babel({
             presets: ['@babel/env']
@@ -13,3 +19,9 @@ task('js', () => {
         .pipe(dest('./dist/'))
 })
 
+task('js', () => {
+    return series([
+        'clean',
+        'minify-js'
+    ])
+})
