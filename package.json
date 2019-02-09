@@ -1,0 +1,30 @@
+{
+  "name": "@botflx/gulp-template",
+  "version": "1.0.0",
+  "description": "A simple gulp template",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/botflux/gulp-template.git"
+  },
+  "keywords": [
+    "gulp"
+  ],
+  "author": "Victor Mendele <victor.mendele68@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/botflux/gulp-template/issues"
+  },
+  "homepage": "https://github.com/botflux/gulp-template#readme",
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "gulp": "^4.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-uglify": "^3.0.1"
+  }
+}
